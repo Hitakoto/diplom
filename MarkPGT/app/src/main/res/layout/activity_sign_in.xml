@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".SignInActivity">
+
+    <ImageView
+        android:id="@+id/sign_icon"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/sign_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sign_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/title_sign_in"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sign_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/design_text_fiend"
+        android:ems="10"
+        android:hint="@string/hint_login"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:fontFamily="@font/rubik"
+        android:textColorHint="@color/button_color"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/design_text_fiend"
+        android:ems="10"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:fontFamily="@font/rubik"
+        android:textColorHint="@color/button_color"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/ctv_forgot_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:fontFamily="@font/rubik"
+        android:minHeight="48dp"
+        android:text="@string/forgot"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/background_button"
+        android:backgroundTint="@color/button_color"
+        android:fontFamily="@font/rubik"
+        android:letterSpacing="0"
+        android:padding="10dp"
+        android:text="@string/button_sign_text"
+        android:textAllCaps="false"
+        android:textColor="#42A5F5"
+        android:textSize="20dp"
+        app:backgroundTint="@color/button_color" />
+
+
+</RelativeLayout>
