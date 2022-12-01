@@ -4,5 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_background"
     tools:context=".mainFragments.person.PersonFragment">
 </androidx.constraintlayout.widget.ConstraintLayout>

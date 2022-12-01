@@ -92,9 +92,10 @@
         android:padding="10dp"
         android:text="@string/button_sign_text"
         android:textAllCaps="false"
-        android:textColor="#42A5F5"
+        android:textColor="@color/white"
         android:textSize="20dp"
-        app:backgroundTint="@color/button_color" />
+        app:backgroundTint="@color/button_color"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 </RelativeLayout>
