@@ -2,6 +2,7 @@ package com.example.markpgt
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -17,6 +18,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
+    lateinit var textName: TextView
+    lateinit var textEmail: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +41,12 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        textName = findViewById(R.id.nameUser)
+        textEmail = findViewById(R.id.emailUser)
+
+        textName.text = intent.getStringExtra("name")
+        textEmail.text = intent.getStringExtra("email")
     }
 
     override fun onSupportNavigateUp(): Boolean {

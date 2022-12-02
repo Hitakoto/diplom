@@ -36,7 +36,7 @@
         android:layout_below="@+id/sign_text"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/design_text_fiend"
         android:ems="10"
         android:hint="@string/hint_login"
@@ -44,6 +44,7 @@
         android:padding="10dp"
         android:fontFamily="@font/rubik"
         android:textColorHint="@color/button_color"
+        android:textColor="@color/button_color"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
 
     <EditText
@@ -61,6 +62,7 @@
         android:padding="10dp"
         android:fontFamily="@font/rubik"
         android:textColorHint="@color/button_color"
+        android:textColor="@color/button_color"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <TextView
@@ -84,7 +86,7 @@
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="130dp"
         android:background="@drawable/background_button"
         android:backgroundTint="@color/button_color"
         android:fontFamily="@font/rubik"
