@@ -42,11 +42,11 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        textName = findViewById(R.id.nameUser)
+        /*textName = findViewById(R.id.nameUser)
         textEmail = findViewById(R.id.emailUser)
 
         textName.text = intent.getStringExtra("name")
-        textEmail.text = intent.getStringExtra("email")
+        textEmail.text = intent.getStringExtra("email")*/
     }
 
     override fun onSupportNavigateUp(): Boolean {

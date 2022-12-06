@@ -84,7 +84,7 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_V
     }
 
     companion object {
-        private const val DB_NAME = "DBUser.db"
+        private const val DB_NAME = "DBRatings.db"
         private var DB_PATH = ""
         private const val DB_VERSION = 4
     }

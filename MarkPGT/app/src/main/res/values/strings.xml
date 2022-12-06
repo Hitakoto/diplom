@@ -16,4 +16,11 @@
     <string name="menu_home">Главная</string>
     <string name="menu_person">Профиль</string>
     <string name="menu_settings">Настройки</string>
+
+    <string name="text_rec_book">Зачетная книжка студента</string>
+    <string name="text_marks">Оценки</string>
+
+    <string name="text_discipline">Дисциплина</string>
+    <string name="text_mark">Оценка</string>
+    <string name="text_late">Пропущено, ч.</string>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,4 +7,125 @@
     android:orientation="vertical"
     tools:context=".mainFragments.home.HomeFragment">
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/nameRecBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/rubik"
+        android:shadowColor="#68B2DA"
+        android:shadowDx="0"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:text="@string/text_rec_book"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:ignore="SpUsage,TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/ivb_rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameRecBook"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:src="@drawable/icon_rec_book"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,KeyboardInaccessibleWidget,SpeakableTextPresentCheck" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ivb_rec"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/mark_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nameMarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/rubik_bold"
+            android:text="@string/text_marks"
+            android:textAlignment="center"
+            android:textColor="@color/button_color"
+            android:textSize="20dp"/>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/nameMarks"
+            android:layout_marginTop="30dp"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/nameDiscipline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text="@string/text_discipline"
+                            android:textAlignment="center"
+                            android:textColor="@color/button_color"
+                            android:textSize="16dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="3dp"/>
+
+                        <TextView
+                            android:id="@+id/nameMark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text="@string/text_mark"
+                            android:textAlignment="center"
+                            android:textColor="@color/button_color"
+                            android:textSize="16dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="3dp"/>
+
+                        <TextView
+                            android:id="@+id/nameLate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text="@string/text_late"
+                            android:textAlignment="center"
+                            android:textColor="@color/button_color"
+                            android:textSize="16dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="3dp"/>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>
