@@ -16,7 +16,7 @@
         android:shadowColor="#68B2DA"
         android:shadowDx="0"
         android:shadowDy="10"
-        android:shadowRadius="10"
+        android:shadowRadius="5"
         android:text="@string/text_rec_book"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -34,6 +34,7 @@
         android:clickable="true"
         android:src="@drawable/icon_rec_book"
         android:contentDescription="TODO"
+        android:background="@drawable/click_iv"
         tools:ignore="ContentDescription,KeyboardInaccessibleWidget,SpeakableTextPresentCheck" />
 
     <RelativeLayout
