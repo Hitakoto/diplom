@@ -62,16 +62,7 @@ class SignInActivity : AppCompatActivity() {
                 val cursor: Cursor = database.rawQuery(sql, null)
                 if (cursor.count !== 0) {
                     Toast.makeText(this, "Авторизация", Toast.LENGTH_LONG).show()
-                    val intent1 = Intent(this, MainActivity::class.java) // Передача данных
-                    val user: HashMap<String, Any> = HashMap<String, Any>()
-                    cursor.moveToFirst()
-                    while (!cursor.isAfterLast) {
-                        user["name"] = cursor.getString(0)
-                        user["email"] = cursor.getString(1)
-                        cursor.moveToNext()
-                    }
-                    intent1.putExtra("name", user["name"].toString())
-                    intent1.putExtra("email", user["email"].toString())
+                    val intent1 = Intent(this, MainActivity::class.java)
                     startActivity(intent1)
                 } else {
                     Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_LONG).show()

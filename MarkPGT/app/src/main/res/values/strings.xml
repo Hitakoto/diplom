@@ -8,8 +8,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Мартель Данил Анатольевич</string>
+    <string name="nav_header_subtitle">martel.member@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -23,4 +23,23 @@
     <string name="text_discipline">Дисциплина</string>
     <string name="text_mark">Оценка</string>
     <string name="text_late">Пропущено, ч.</string>
+
+
+    <string name="text_book">Зачетная книжка</string>
+    <string name="text_sem">Семестр</string>
+    <string name="text_surStud">Фамилия студента</string>
+    <string name="text_nameStud">Имя студента</string>
+    <string name="text_patStud">Отчество студента</string>
+    <string name="text_dis">Дисциплина</string>
+    <string name="text_hour">Количество часов</string>
+    <string name="text_score">Оценка</string>
+    <string name="text_examD">Дата экзамена</string>
+    <string name="text_hourL">Количество пропущенных часов</string>
+    <string name="text_surTea">Фамилия преподавателя</string>
+    <string name="text_nameTea">Имя преподавателя</string>
+    <string name="text_patTea">Отчество преподавателя</string>
+
+    <string name="text_user_info">Информация о пользователе</string>
+
+    <string name="text_sign_out">Выход</string>
 </resources>

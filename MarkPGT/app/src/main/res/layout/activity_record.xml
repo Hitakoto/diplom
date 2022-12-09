@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,4 +7,127 @@
     android:background="@color/app_background"
     tools:context=".RecordActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/nameBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:shadowColor="#68B2DA"
+        android:shadowDx="0"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="@string/text_book"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        tools:ignore="SpUsage,TextContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearRec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nameBook"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:id="@+id/tableRec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/rubik"
+                    android:textStyle="bold"
+                    android:text="@string/text_sem"
+                    android:textColor="@color/white"
+                    android:background="@drawable/table_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/rubik"
+                    android:textStyle="bold"
+                    android:text="@string/text_surStud"
+                    android:textColor="@color/white"
+                    android:background="@drawable/table_background"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/rubik"
+                    android:textStyle="bold"
+                    android:text="@string/text_discipline"
+                    android:textColor="@color/white"
+                    android:background="@drawable/table_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/rubik"
+                    android:textStyle="bold"
+                    android:text="@string/text_hour"
+                    android:textColor="@color/white"
+                    android:background="@drawable/table_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/rubik"
+                    android:textStyle="bold"
+                    android:text="@string/text_score"
+                    android:textColor="@color/white"
+                    android:background="@drawable/table_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/rubik"
+                    android:textStyle="bold"
+                    android:text="@string/text_examD"
+                    android:textColor="@color/white"
+                    android:background="@drawable/table_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/rubik"
+                    android:textStyle="bold"
+                    android:text="@string/text_surTea"
+                    android:textColor="@color/white"
+                    android:background="@drawable/table_background" />
+
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</RelativeLayout>

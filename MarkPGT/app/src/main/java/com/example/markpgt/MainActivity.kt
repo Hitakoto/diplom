@@ -1,9 +1,15 @@
 package com.example.markpgt
 
+import android.database.SQLException
+import android.database.sqlite.SQLiteDatabase
+import android.graphics.Color
 import android.os.Bundle
-import android.view.Menu
+import android.util.Log
+import android.view.Gravity
+import android.widget.LinearLayout
+import android.widget.TableLayout
+import android.widget.TableRow
 import android.widget.TextView
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -12,7 +18,10 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.example.markpgt.R
 import com.example.markpgt.databinding.ActivityMainBinding
+import com.example.markpgt.dbHelper.DBHelper
+import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
