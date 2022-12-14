@@ -12,11 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        android:src="@drawable/default_user_photo"
         android:background="@drawable/photo_background"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:src="@drawable/default_user_photo"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/username"
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginTop="55dp"
+        android:layout_marginRight="15dp"
         android:layout_toEndOf="@+id/userPhoto"
         android:fontFamily="@font/rubik"
         android:text="Мартель Данил Анатольевич"
@@ -47,13 +49,15 @@
         android:textStyle="bold"/>
 
     <RelativeLayout
+        android:id="@+id/relative_person"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/editInfoUser"
         android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/mark_background">
+        android:background="@drawable/design_text_fiend">
 
         <TextView
             android:id="@+id/nameMarks"
@@ -65,6 +69,64 @@
             android:textAlignment="center"
             android:textColor="@color/button_color"
             android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/nameEmailPer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameMarks"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="@string/text_email_person"
+            android:textAlignment="center"
+            android:textColor="@color/button_color"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/editEmPer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameMarks"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="@string/nav_header_subtitle"
+            android:textAlignment="center"
+            android:textColor="@color/button_color"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/nameDescriptionPer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameMarks"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="@string/text_description_person"
+            android:textAlignment="center"
+            android:textColor="@color/button_color"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/editDescriptionPer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameMarks"
+            android:layout_marginTop="90dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="@string/text_description_person_edit"
+            android:textAlignment="center"
+            android:textColor="@color/button_color"
+            android:textSize="16dp" />
 
     </RelativeLayout>
 

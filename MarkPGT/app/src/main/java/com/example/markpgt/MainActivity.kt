@@ -1,27 +1,16 @@
 package com.example.markpgt
 
-import android.database.SQLException
-import android.database.sqlite.SQLiteDatabase
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
-import android.view.Gravity
-import android.widget.LinearLayout
-import android.widget.TableLayout
-import android.widget.TableRow
 import android.widget.TextView
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
-import com.example.markpgt.R
 import com.example.markpgt.databinding.ActivityMainBinding
-import com.example.markpgt.dbHelper.DBHelper
-import java.io.IOException
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,6 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var textName: TextView
     lateinit var textEmail: TextView
+
+    lateinit var quantityLate: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +47,10 @@ class MainActivity : AppCompatActivity() {
 
         textName.text = intent.getStringExtra("name")
         textEmail.text = intent.getStringExtra("email")*/
+
+        quantityLate = findViewById(R.id.quantityLate)
+
+        quantityLate.text = intent.getStringExtra("hoursLate")
     }
 
     override fun onSupportNavigateUp(): Boolean {

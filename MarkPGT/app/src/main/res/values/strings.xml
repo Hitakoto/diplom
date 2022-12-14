@@ -40,6 +40,17 @@
     <string name="text_patTea">Отчество преподавателя</string>
 
     <string name="text_user_info">Информация о пользователе</string>
+    <string name="text_email_person">Эл. почта:</string>
+    <string name="text_description_person">Описание:</string>
+    <string name="text_description_person_edit">Описание отсутствует</string>
 
     <string name="text_sign_out">Выход</string>
+
+    <string name="text_settings_user">Настройки профиля</string>
+    <string name="text_email">Адрес электронной почты</string>
+    <string name="text_description">Описание</string>
+    <string name="text_confirm_info_user">Сохранить изменения</string>
+
+    <string name="text_tvb_design">Внешний вид</string>
+    <string name="text_tvb_about_app">О приложении</string>
 </resources>

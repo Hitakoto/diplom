@@ -6,4 +6,60 @@
     android:layout_height="match_parent"
     android:background="@color/app_background"
     tools:context=".mainFragments.settings.SettingsFragment">
+
+    <TextView
+        android:id="@+id/tvbDesign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_design"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/rubik"
+        android:gravity="center_vertical"
+        android:text="@string/text_tvb_design"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        tools:ignore="SpUsage,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvbInfoApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvbDesign"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_info"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/rubik"
+        android:gravity="center_vertical"
+        android:text="@string/text_tvb_about_app"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        tools:ignore="SpUsage,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvbSignOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvbInfoApp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_sign_out"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/rubik"
+        android:gravity="center_vertical"
+        android:text="@string/text_sign_out"
+        android:textColor="@color/red"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        tools:ignore="SpUsage,TextContrastCheck,TouchTargetSizeCheck" />
 </RelativeLayout>

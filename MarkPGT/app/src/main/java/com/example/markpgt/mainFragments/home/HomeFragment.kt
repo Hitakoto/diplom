@@ -1,17 +1,19 @@
 package com.example.markpgt.mainFragments.home
 
 import android.content.Intent
+import android.content.Intent.getIntent
 import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.fragment.app.Fragment
+import com.example.markpgt.MainActivity
 import com.example.markpgt.R
 import com.example.markpgt.RecordActivity
 import com.example.markpgt.dbHelper.DBHelper
@@ -55,7 +57,7 @@ class HomeFragment : Fragment() {
             throw mIOException
         }
 
-        val cursor = database.rawQuery("SELECT Discipline.nameDis, Grades.nameGrade, RecordBook.lateHours FROM RecordBook, Discipline, Grades WHERE RecordBook.discipline = Discipline.idDiscipline AND RecordBook.gradeSemester = Grades.idGrade", null)
+        val cursor = database.rawQuery("SELECT Discipline.nameDis, Grades.nameGrade FROM RecordBook, Discipline, Grades WHERE RecordBook.discipline = Discipline.idDiscipline AND RecordBook.gradeSemester = Grades.idGrade", null)
         if (cursor.moveToFirst()) {
             do {
                 val row = TableRow(activity!!)
@@ -69,14 +71,8 @@ class HomeFragment : Fragment() {
                 textGrade.setTextColor(Color.rgb(24, 79, 154))
                 textGrade.gravity = Gravity.CENTER
 
-                val textHourL = TextView(activity!!)
-                textHourL.text = cursor.getInt(2).toString() + " "
-                textHourL.setTextColor(Color.rgb(24, 79, 154))
-                textHourL.gravity = Gravity.CENTER
-
                 row.addView(textDis)
                 row.addView(textGrade)
-                row.addView(textHourL)
                 tableRet.addView(row)
             } while (cursor.moveToNext())
         } else Log.d("mLog", "0 rows")

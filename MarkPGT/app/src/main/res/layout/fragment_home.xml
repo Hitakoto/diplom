@@ -38,13 +38,15 @@
         tools:ignore="ContentDescription,KeyboardInaccessibleWidget,SpeakableTextPresentCheck" />
 
     <RelativeLayout
+        android:id="@+id/relative"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nameLate"
         android:layout_below="@+id/ivb_rec"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/mark_background"
+        android:background="@drawable/background_info"
         android:orientation="horizontal">
 
         <TextView
@@ -56,12 +58,12 @@
             android:text="@string/text_marks"
             android:textAlignment="center"
             android:textColor="@color/button_color"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
 
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="419dp"
             android:layout_below="@+id/nameMarks"
             android:layout_marginTop="30dp"
             tools:ignore="SpeakableTextPresentCheck">
@@ -70,10 +72,9 @@
                 android:id="@+id/linearRatings"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp">
-
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
 
                 <TableLayout
                     android:id="@+id/ratings"
@@ -88,46 +89,70 @@
                             android:id="@+id/nameDiscipline"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
                             android:fontFamily="@font/rubik_bold"
+                            android:gravity="center"
+                            android:padding="3dp"
                             android:text="@string/text_discipline"
                             android:textAlignment="center"
                             android:textColor="@color/button_color"
-                            android:textSize="16dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:padding="3dp"/>
+                            android:textSize="16dp" />
 
                         <TextView
                             android:id="@+id/nameMark"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
                             android:fontFamily="@font/rubik_bold"
+                            android:gravity="center"
+                            android:padding="3dp"
                             android:text="@string/text_mark"
                             android:textAlignment="center"
                             android:textColor="@color/button_color"
-                            android:textSize="16dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:padding="3dp"/>
-
-                        <TextView
-                            android:id="@+id/nameLate"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/rubik_bold"
-                            android:text="@string/text_late"
-                            android:textAlignment="center"
-                            android:textColor="@color/button_color"
-                            android:textSize="16dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:padding="3dp"/>
+                            android:textSize="16dp" />
                     </TableRow>
                 </TableLayout>
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nameLate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/text_late"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentBottom="true"
+        tools:ignore="SpUsage,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/quantityLate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/nameLate"
+        android:fontFamily="@font/rubik"
+        android:shadowColor="#68B2DA"
+        android:textAlignment="textEnd"
+        android:shadowDx="0"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        tools:ignore="SpUsage,TextContrastCheck" />
+
 </RelativeLayout>

@@ -63,6 +63,17 @@ class SignInActivity : AppCompatActivity() {
                 if (cursor.count !== 0) {
                     Toast.makeText(this, "Авторизация", Toast.LENGTH_LONG).show()
                     val intent1 = Intent(this, MainActivity::class.java)
+                    val sql : String = "SELECT Discipline.nameDis, Grades.nameGrade, RecordBook.lateHours FROM RecordBook, Discipline, Grades WHERE RecordBook.discipline = Discipline.idDiscipline AND RecordBook.gradeSemester = Grades.idGrade"
+
+                    val sqlLate = "SELECT Discipline.nameDis, Grades.nameGrade, RecordBook.lateHours FROM RecordBook, Discipline, Grades WHERE RecordBook.discipline = Discipline.idDiscipline AND RecordBook.gradeSemester = Grades.idGrade"
+                    val cursorLate: Cursor = database.rawQuery(sqlLate, null)
+                    val late = HashMap<String, Any>()
+                    cursorLate.moveToFirst()
+                    while (!cursorLate.isAfterLast) {
+                        late["lateHours"] = cursorLate.getString(2)
+                        cursorLate.moveToNext()
+                    }
+                    intent1.putExtra("lateHours", late["lateHours"].toString())
                     startActivity(intent1)
                 } else {
                     Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_LONG).show()

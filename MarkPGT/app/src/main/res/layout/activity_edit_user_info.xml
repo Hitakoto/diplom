@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".EditUserInfoActivity">
+
+    <TextView
+        android:id="@+id/nameInfoUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:shadowColor="#68B2DA"
+        android:shadowDx="0"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="@string/text_settings_user"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        tools:ignore="SpUsage,TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/userPhotoEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameInfoUser"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/photo_background"
+        android:clickable="true"
+        android:src="@drawable/default_user_photo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/usernameNotEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameInfoUser"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="15dp"
+        android:layout_toEndOf="@+id/userPhotoEdit"
+        android:fontFamily="@font/rubik"
+        android:text="Мартель Данил Анатольевич"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/emailEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userPhotoEdit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/design_text_fiend"
+        android:ems="10"
+        android:hint="@string/text_email"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:fontFamily="@font/rubik"
+        android:textColorHint="@color/button_color"
+        android:textColor="@color/button_color"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+    <EditText
+        android:id="@+id/descriptionEdit"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/emailEdit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/design_text_fiend"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/text_description"
+        android:padding="10dp"
+        android:fontFamily="@font/rubik"
+        android:textColorHint="@color/button_color"
+        android:textColor="@color/button_color"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/btn_confirm_edit_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descriptionEdit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/background_button"
+        android:backgroundTint="@color/button_color"
+        android:fontFamily="@font/rubik"
+        android:letterSpacing="0"
+        android:padding="10dp"
+        android:text="@string/text_confirm_info_user"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:backgroundTint="@color/button_color"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</RelativeLayout>
