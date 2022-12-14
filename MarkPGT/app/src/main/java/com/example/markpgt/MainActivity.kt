@@ -1,5 +1,6 @@
 package com.example.markpgt
 
+import android.app.Dialog
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -16,9 +17,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-
-    lateinit var textName: TextView
-    lateinit var textEmail: TextView
 
     lateinit var quantityLate: TextView
 
@@ -42,11 +40,8 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        /*textName = findViewById(R.id.nameUser)
-        textEmail = findViewById(R.id.emailUser)
-
-        textName.text = intent.getStringExtra("name")
-        textEmail.text = intent.getStringExtra("email")*/
+        val customDialog = Dialog(this)
+        customDialog.setContentView(R.layout.fragment_person)
 
         quantityLate = findViewById(R.id.quantityLate)
 

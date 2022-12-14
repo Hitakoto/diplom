@@ -96,7 +96,7 @@
         android:layout_below="@+id/descriptionEdit"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/background_button"
         android:backgroundTint="@color/button_color"
         android:fontFamily="@font/rubik"

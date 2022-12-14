@@ -58,22 +58,22 @@ class SignInActivity : AppCompatActivity() {
             if (loginText.text.toString() == "" || passwordText.text.toString() == "") {
                 Toast.makeText(this, "Не введены логин или пароль", Toast.LENGTH_LONG).show()
             } else {
-                val sql = "SELECT login, password FROM users WHERE login = '" + loginText.text.toString() + "' AND password = '" + passwordText.text.toString() + "'"
+                val sql = "SELECT idUser, email, description, login, password FROM users WHERE login = '" + loginText.text.toString() + "' AND password = '" + passwordText.text.toString() + "'"
                 val cursor: Cursor = database.rawQuery(sql, null)
                 if (cursor.count !== 0) {
                     Toast.makeText(this, "Авторизация", Toast.LENGTH_LONG).show()
                     val intent1 = Intent(this, MainActivity::class.java)
-                    val sql : String = "SELECT Discipline.nameDis, Grades.nameGrade, RecordBook.lateHours FROM RecordBook, Discipline, Grades WHERE RecordBook.discipline = Discipline.idDiscipline AND RecordBook.gradeSemester = Grades.idGrade"
-
-                    val sqlLate = "SELECT Discipline.nameDis, Grades.nameGrade, RecordBook.lateHours FROM RecordBook, Discipline, Grades WHERE RecordBook.discipline = Discipline.idDiscipline AND RecordBook.gradeSemester = Grades.idGrade"
-                    val cursorLate: Cursor = database.rawQuery(sqlLate, null)
-                    val late = HashMap<String, Any>()
-                    cursorLate.moveToFirst()
-                    while (!cursorLate.isAfterLast) {
-                        late["lateHours"] = cursorLate.getString(2)
-                        cursorLate.moveToNext()
+                    val user = HashMap<String, Any>()
+                    cursor.moveToFirst()
+                    while (!cursor.isAfterLast) {
+                        user["idUser"] = cursor.getString(0)
+                        user["email"] = cursor.getString(1)
+                        user["description"] = cursor.getString(2)
+                        cursor.moveToNext()
                     }
-                    intent1.putExtra("lateHours", late["lateHours"].toString())
+                    intent1.putExtra("Email", user["email"].toString())
+                    intent1.putExtra("Description", user["description"].toString())
+                    intent1.putExtra("iduser", user["idUser"].toString())
                     startActivity(intent1)
                 } else {
                     Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_LONG).show()
